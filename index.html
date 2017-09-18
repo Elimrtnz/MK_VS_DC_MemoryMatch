@@ -1,0 +1,418 @@
+<!DOCTYPE>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--gutter begins-->
+<div class="gutter"> 
+
+    <header class="header text-center">
+        <div class="menu">
+            <ul>
+                <li><a data-toggle="modal" data-target="#howToModal">How To Play</a></li>
+                <!--<li>Settings link</li>-->
+            </ul>
+        </div>
+        <h3 class="title">MORTAL KOMBAT VS DC UNIVERSE</h3>
+    </header>
+
+    <!--health-container begins-->
+    <div class="health-container col-xs-12">
+
+        <div id="playerOne-health-container" class="col-xs-6">
+            <div class="progress">
+                <div id="playerOne-health-bar" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                    <span>100%</span>
+                </div> 
+            </div>
+            <div id="playerOne-stats">
+                <span class="playerName">PLAYER ONE </span>
+                    <span class="wins"> Wins:
+                        <span class="value">0</span> 
+                    </span>
+                    <span class="matches">Matches:
+                        <span id="playerOne-matches" class="value">0</span> 
+                    </span>
+            </div> 
+        </div>
+
+        <div id="playerTwo-health-container" class="col-xs-6">
+            <div class="progress">
+                <div id="playerTwo-health-bar" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                    <span>100%</span>
+                </div>
+            </div>
+            <div id="playerTwo-stats">
+                    <span class="wins"> Wins:
+                        <span class="value">0</span> 
+                    </span>
+                    <span class="matches">Matches:
+                        <span id="playerTwo-matches" class="value">0</span> 
+                    </span>
+                <span class="playerName">PLAYER TWO </span>
+            </div> 
+        </div>
+
+    </div>
+    <!--health-container ends-->
+
+    <!--side-options begins-->
+    <div id="options" class="col-xs-2 text-center">
+        <div class="options">
+            <div class="attackPower">
+                <h5>Attack Power</h5>
+                <p>15 X's 1</p>
+            </div>
+
+            <div class="audio">
+                <span class="glyphicon glyphicon-volume-up" onclick="music_off()"></span>
+                <span class="glyphicon glyphicon-volume-off" onclick="music_on()"></span>
+                <p>Music On</p>
+                <audio class="themeMusic" autoplay="true" loop="loop" src="audio/MortalKombat.mp3"></audio>
+            </div>
+            <button class="reset" onclick="resetGame()">Reset Game</button>
+        </div>
+    </div>
+    <!--side-options ends-->
+
+    <!--boardGame-container begins-->
+    <div id="boardGame" class="col-xs-10">
+
+        <!--playerOneBoard-container begins-->
+        <div id="playerOneBoard" class= "text-center">
+            <div class="cardRow col-xs-12">
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                   <div id="one" class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div id="Two" class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cardRow col-xs-12">
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cardRow col-xs-12">
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front One col-xs-12">
+                    </div>
+                    <div class="back col-xs-12">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--playerOneBoard-container ends-->
+
+        <!--playerTwoBoard-container starts-->
+        <div id="playerTwoBoard" class="text-center">
+
+            <div class="cardRow col-xs-12">
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardRow col-xs-12">
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardRow col-xs-12">
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="front Two col-xs-12">
+                    </div>
+                   <div class="back col-xs-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--playerTwoBoard-container ends-->
+
+    </div>
+     <!--boardGame-container ends-->
+
+     <!--player turn div-->
+     <div id="switchTurn">
+        <h1></h1>
+    </div>
+
+    <!--win div-->
+     <div id="winDiv">
+        <h1></h1>
+        <button class="rematch" onclick="rematch()">REMATCH ?</button>
+    </div>
+
+  <!-- howToModal begins -->
+    <div class="modal fade" id="howToModal" role="dialog">
+        <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">How To Play</h4>
+            </div>
+            <div class="modal-body">
+                <p>This game is modeled after a classic memory match game with a fighting game twist. It's been developed for 2 players.</p> 
+                <p>Each player starts with 100 health and 15 attack power.</p>
+                <p>Attack power increases depending on how many matches are made in a row.</p>
+                <p>Inflict damage by flipping over two cards and matching them each turn.</p>
+            </div>
+            <div class="modal-footer">
+                <p>Hint: Match the Brutality and Fatality cards to unlock game secrets</p>
+            </div>
+        </div>
+      
+        </div>
+    </div>
+    <!-- howToModal ends -->
+
+</div>
+<!--gutter ends-->
+
+<!--sound fx begin -->
+<audio class="brutalitySFX" src="audio/brutality.mp3"></audio>
+<audio class="fatalitySFX" src="audio/fatality.mp3"></audio>
+<audio class="scorpionSFX" src="audio/mk_scorpion.mp3"></audio>
+<audio class="fightSFX" src="audio/fight.mp3"></audio>
+<audio class="batmanSFX" src="audio/im_batman.mp3"></audio>
+
+</body>
+</html>

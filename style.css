@@ -1,0 +1,327 @@
+/******************BODY AND GENERAL DISPLAY***************/
+body{
+	font-family: 'Press Start 2P', cursive;
+	background-color: black;
+	background-image: url("imgz/lava.gif");
+    background-size: cover;
+    color: white;
+}
+@media (orientation: portrait){
+    .gutter {
+        display: none;
+    }
+    body {
+        background-color: black;
+        background-image: url("imgz/rotate.png");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.gutter{
+    height:100%;
+    position: relative;
+}
+.header{
+    padding-top: 2px;
+	background-color: black;
+	color:white;
+	opacity: 0.6;
+}
+.menu a{
+    color:red;
+}
+.menu a:hover{
+    color:red;
+    text-decoration: none;
+}
+.menu li{
+	display: inline-block;
+	margin-right: 20px;
+    cursor: pointer;
+    color:red;
+}
+
+/******************HEALTH-CONTAINER***************/
+.health-container{
+	background-color: black;
+	color:white;
+	opacity: 0.6;
+}
+.progress{
+	border:2px solid white;
+	margin-bottom:15px;
+	background-color: black;
+}
+.playerName{
+	margin-right: 10px;
+}
+.wins{
+	margin-right: 10px;
+}
+.matches{
+	margin-right: 10px;
+}
+#playerTwo-stats{
+	text-align: right;
+}
+#playerOne-health-bar{
+    background-color:red;
+}
+#playerTwo-health-bar{
+    background-color:blue;
+    display: block; 
+    float: right;
+}
+
+/**********GLOBAL BOARD SKELETON******************/
+#boardGame{
+    height:82%;
+}
+.cardRow{
+	height:30%;
+	width:100%;
+	position: relative;
+	margin-bottom: 0.5%;
+}
+.card{
+	height:100%;
+	position: relative;
+	padding:0;
+	width:12%;
+	margin-right: 1%;
+	display: inline-block;
+    cursor: pointer;
+}
+.back{
+	height:100%;
+	position: absolute;
+	background-color: black;
+	background-image: url("imgz/mkVSdc.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hideBack{
+	display: none;
+}
+.front{
+	height:100%;
+	position: absolute;
+}
+
+#options{
+	height:82%;
+}
+.options{
+	width:100%;
+	height:50%;
+    background-color: black;
+    opacity: 0.8;
+    border: 1px solid red;
+    margin-top: 15%;
+}
+
+.attackPower{
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+
+.reset{
+    background-color: black;
+    border: 1px solid white;
+}
+
+.audio {
+    margin-bottom: 25%;
+}
+
+.glyphicon{
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.glyphicon-volume-off{
+    display: none;
+}
+
+/*******************PLAYER ONE BOARD******************/
+#playerOneBoard{
+	height:100%;
+	display:block;
+    padding-top: 1%;
+}
+#playerOneBoard .card, #playerOneBoard .front, #playerOneBoard .back{
+    border: 0.1px solid red;
+}
+
+/*PLAYER ONE CLASSES*/
+.joker{
+	background-image: url("imgz/joker.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.batMan{
+	background-image: url("imgz/batman.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.catWoman{
+	background-image: url("imgz/catWoman.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.flash{
+	background-image: url("imgz/flashInjustice.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.superMan{
+	background-image: url("imgz/superman.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.deathStroke{
+	background-image: url("imgz/deathstroke.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.wonderWoman{
+	background-image: url("imgz/wonderWoman.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fatality{
+	background-color: black;
+	background-image: url("imgz/fatality.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.brutality{
+	background-color: white;
+	background-image: url("imgz/brutality.jpe");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*******************PLAYER 	TWO BOARD******************/
+#playerTwoBoard{
+	height:100%;
+	display:none;
+    padding-top: 1%;
+}
+#playerTwoBoard .card, #playerTwoBoard .front, #playerTwoBoard .back{
+    border: 0.1px solid blue;
+}
+
+/*PLAYER TWO CLASSES*/
+.scorpion{
+	background-image: url("imgz/scorpion.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.subZero{
+	background-image: url("imgz/subzero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.sonya{
+	background-image: url("imgz/sonia.jpg");
+    background-size: cover;
+    background-position: 0px -1px;
+    background-repeat: no-repeat;
+}
+.raiden{
+	background-image: url("imgz/raiden.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.baraka{
+	background-image: url("imgz/baraka.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.liuKang{
+	background-image: url("imgz/liukang.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.shangTsung{
+	background-image: url("imgz/shangtsung.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*******************PLAYER TURN DIV******************/
+
+#switchTurn{
+    display:none;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    background-color: black;
+    border: 2px solid red;
+    height: 25%;
+    width: 55%;
+    text-align: center;
+}
+#switchTurn h1{
+    position: relative;
+    top: 25%;
+    text-transform: uppercase;
+}
+
+/*******************WIN DIV******************/
+#winDiv{
+    display:none;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    background-color: black;
+    border: 2px solid red;
+    height: 25%;
+    width: 55%;
+    text-align: center;
+}
+#winDiv h1{
+    margin-top: 8%;
+    text-transform: uppercase;
+}
+
+.rematch{
+    margin-top: 1%;
+    background-color: black;
+    border: 1px solid red;
+}
+/*******************HOW TO PLAY MODAL******************/
+#howToModal .modal-content{
+    background-color: black;
+    border: 1px solid red;
+}
+.modal-footer{
+    text-align: left;
+}
+.close{
+    color:white;
+    opacity: 1.0;
+    text-shadow: 0 1px 0 red;
+}
